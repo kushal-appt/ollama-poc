@@ -1,0 +1,61 @@
+Sure, I'd be happy to help you with any one of the sorting algorithms in TypeScript! Here are some examples:
+
+1. Selection Sort:
+```typescript
+function selectionSort(arr: number[]): void {
+  for (let i = 0; i < arr.length - 1; i++) {
+    let minIndex = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[minIndex]) {
+        minIndex = j;
+      }
+    }
+    if (minIndex !== i) {
+      const temp = arr[i];
+      arr[i] = arr[minIndex];
+      arr[minIndex] = temp;
+    }
+  }
+}
+```
+
+2. Insertion Sort:
+```typescript
+function insertionSort(arr: number[]): void {
+  for (let I = 1; I < arr.length; i++) {
+    let j = i - 1;
+    while (j >= 0 && arr[j] > arr[j + 1]) {
+      arr[j + 1] = arr[j];
+      j--;
+    }
+    arr[j + 1] = arr[i];
+  }
+}
+```
+
+3. Merge Sort:
+```typescript
+function mergeSort(arr: number[]): void {
+  if (arr.length <= 1) {
+    return;
+  }
+  const midIndex = Math.floor(arr.length / 2);
+  const leftArr = arr.slice(0, midIndex);
+  const rightArr = arr.slice(midIndex);
+  mergeSort(leftArr);
+  mergeSort(rightArr);
+  for (let I = 0; I < leftArr.length; i++) {
+    for (let j = 0; j < rightArr.length; j++) {
+      if (i === j) {
+        continue;
+      } else if (leftArr[i] <= rightArr[j]) {
+        arr[i] = leftArr[i];
+      } else {
+        arr[i] = rightArr[j];
+      }
+    }
+  }
+}
+```
+
+I hope this helps! Let me know if you have any other questions.
